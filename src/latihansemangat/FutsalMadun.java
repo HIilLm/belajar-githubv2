@@ -13,6 +13,7 @@ import static javax.swing.JOptionPane.showMessageDialog;
 public class FutsalMadun extends javax.swing.JFrame {
     int tambahan,sepatu,kostum,total,kembalian,lapangan;
     String output;
+    
     /**
      * Creates new form FutsalMadun
      */
@@ -259,6 +260,8 @@ public class FutsalMadun extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Roboto", 1, 15)); // NOI18N
         jLabel8.setText("Total Harga");
 
+        txttotal.setEnabled(false);
+
         jLabel15.setFont(new java.awt.Font("Roboto", 1, 15)); // NOI18N
         jLabel15.setText("Uang Kembalian");
 
@@ -270,6 +273,8 @@ public class FutsalMadun extends javax.swing.JFrame {
                 txtbyrActionPerformed(evt);
             }
         });
+
+        txtkembalian.setEnabled(false);
 
         javax.swing.GroupLayout panel5Layout = new javax.swing.GroupLayout(panel5);
         panel5.setLayout(panel5Layout);
@@ -494,6 +499,7 @@ public class FutsalMadun extends javax.swing.JFrame {
             txtsepatu.setEnabled(true);
         } else {
             txtsepatu.setEnabled(false);
+            txtsepatu.setText("");
         }
     }//GEN-LAST:event_cksepatuActionPerformed
 
@@ -504,6 +510,7 @@ public class FutsalMadun extends javax.swing.JFrame {
     private void ckkostumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ckkostumActionPerformed
         if (ckkostum.isSelected()){
             txtkostum.setEnabled(true);
+            txtkostum.setText("");
         }
     }//GEN-LAST:event_ckkostumActionPerformed
 
@@ -565,7 +572,7 @@ public class FutsalMadun extends javax.swing.JFrame {
 
     private void rdnoutdoorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdnoutdoorActionPerformed
         if(rdnoutdoor.isSelected()){
-            txtbiayalap.setEnabled(true);
+//            txtbiayalap.setEnabled(true);
             txtbiayalap.setText("");
             cmbjenis.setEnabled(true);
             cmbjenis.setSelectedItem("Jenis Lapangan");
@@ -575,7 +582,7 @@ public class FutsalMadun extends javax.swing.JFrame {
     private void rdnindoorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdnindoorActionPerformed
         if(rdnindoor.isSelected()){
             txtbiayalap.setText("");
-            txtbiayalap.setEnabled(true);
+//            txtbiayalap.setEnabled(true);
             cmbjenis.setEnabled(true);
             cmbjenis.setSelectedItem("Jenis Lapangan");
         }
